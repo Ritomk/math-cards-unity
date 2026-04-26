@@ -88,7 +88,7 @@ Instead of tight coupling or a global singleton event system, game systems commu
 │ CardPick     │──────────────────────►│ CardManager  │
 │ Controller   │                       └──────────────┘
 └──────────────┘    SoGameStateEvents   ┌──────────────┐
-                ──────────────────────►│ GameManager  │
+                 ──────────────────────►│ GameManager  │
 ┌──────────────┐    SoContainerEvents   └──────────────┘
 │ Table        │──────────────────────►┌──────────────┐
 │ Container    │                       │ EndRoundState│
