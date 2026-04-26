@@ -4,7 +4,7 @@
 
 ![Screenshot of Math Cards gameplay](ReadmeImages/GameScreen.png)
 
-> **Note**: This project originated from a [C++ prototype](https://github.com/Ritomk/math-cards-v2) built as a university assignment, later evolved into a fully-featured 3D Unity game with custom AI, shader effects, and a complete game loop.
+> **Note**: This project originated from a [C++ prototype](https://github.com/Ritomk/math-cards-cpp) built as a university assignment, later evolved into a fully-featured 3D Unity game with custom AI, shader effects, and a complete game loop.
 
 ---
 
