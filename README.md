@@ -54,9 +54,9 @@ The game runs **two concurrent generic state machines** — one for the overall 
 
 ```
 Game State Machine                              Player State Machine
-┌───────────┐                                   ┌───────────────────┐
+┌────────────┐                                   ┌───────────────────┐
 │  Setup     │──────►┌────────────┐              │  TurnIdle         │
-└───────────┘        │ BeginRound │              │  CardPicked       │
+└────────────┘       │ BeginRound │              │  CardPicked       │
                      └────────────┘              │  CardPlacedTable  │
                           │                      │  CardPlacedMerger │
              ┌────────────┼────────────┐         │  AllCardsPlaced   │
@@ -64,7 +64,7 @@ Game State Machine                              Player State Machine
       ┌────────────┐           ┌──────────────┐  │  LookAround       │
       │ PlayerTurn │◄─────────►│ OpponentTurn │  │  PauseGame        │
       └────────────┘           └──────────────┘  │  BeginRound       │
-             │                         │         │  EndRound          │
+             │                         │         │  EndRound         │
              └────────────┬────────────┘         └───────────────────┘
                           ▼
                    ┌────────────┐
@@ -88,7 +88,7 @@ Instead of tight coupling or a global singleton event system, game systems commu
 │ CardPick     │──────────────────────►│ CardManager  │
 │ Controller   │                       └──────────────┘
 └──────────────┘    SoGameStateEvents   ┌──────────────┐
-                  ──────────────────────►│ GameManager  │
+                ──────────────────────►│ GameManager  │
 ┌──────────────┐    SoContainerEvents   └──────────────┘
 │ Table        │──────────────────────►┌──────────────┐
 │ Container    │                       │ EndRoundState│
